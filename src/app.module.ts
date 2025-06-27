@@ -2,6 +2,10 @@ import { Module } from '@nestjs/common';
 import { ConfigModule, ConfigService } from '@nestjs/config';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { config } from 'process';
+import { LibroModule } from './libro/libro.module';
+import { PrestamoModule } from './prestamo/prestamo.module';
+import { UsuarioModule } from './usuario/usuario.module';
+import { AutorModule } from './autor/autor.module';
 
 @Module({
   imports: [ConfigModule.forRoot({
@@ -15,6 +19,10 @@ import { config } from 'process';
               database: Config.get('DB_NAME'), 
               entities: [__dirname + '/**/.entitys/*.entity{.ts,.js}'],
               synchronize: true,
-            })})],
+            })}),
+            LibroModule,
+            PrestamoModule,
+            UsuarioModule,
+            AutorModule],
 })
 export class AppModule {}
