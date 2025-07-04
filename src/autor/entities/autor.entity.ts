@@ -1,11 +1,12 @@
 import { Libro } from "src/libro/entities/libro.entity";
-import { Column, ManyToOne, PrimaryGeneratedColumn } from "typeorm";
+import { Column,  Entity,  OneToMany , PrimaryGeneratedColumn } from "typeorm";
 
+@Entity()
 export class Autor {
     @PrimaryGeneratedColumn()
     id: number;
     @Column()
     nombre: string;
-    @ManyToOne(() => Libro, (libro) => libro.autor)
+    @OneToMany(() => Libro, (libro) => libro.autor)
     libros: Libro[];
 }

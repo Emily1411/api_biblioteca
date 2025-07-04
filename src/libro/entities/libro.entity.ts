@@ -1,7 +1,8 @@
-import { Column, ManyToMany, ManyToOne, PrimaryGeneratedColumn } from "typeorm";
+import { Column, Entity, ManyToOne, OneToMany, PrimaryGeneratedColumn } from "typeorm";
 import { Autor } from '../../autor/entities/autor.entity';
+import { Prestamo } from "src/prestamo/entities/prestamo.entity";
 
-
+@Entity()
 export class Libro {
     @PrimaryGeneratedColumn()
     id: number;
@@ -11,4 +12,6 @@ export class Libro {
     autor: Autor;
     @Column()
     isbn: string;
+    @OneToMany(() => Prestamo, (prestamo) => prestamo.usuario)
+    prestamos: Prestamo[];
 }
