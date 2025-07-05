@@ -13,7 +13,7 @@
   <h2>🚀 Pasos para levantar el servidor</h2>
     <ol>
         <li><strong>Clonar el repositorio</strong>
-            <code>git clone [url-del-repositorio]<br>cd [api_biblioteca]</code>
+            <code>git clone (https://github.com/Emily1411/api_biblioteca.git)<br>cd [api_biblioteca]</code>
         </li>
         <li><strong>Instalar dependencias</strong>
             <code>npm install</code>
