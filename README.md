@@ -1,3 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+<body>
+    <h1>API de Biblioteca - Documentación</h1>
+   <h2>📋 Requisitos </h2>
+    <ul>
+        <li>Node.js (v14 o superior)</li>
+        <li>npm</li>
+        <li>MongoDB (local)</li>
+        <li>Insomnia para probar los endpoints</li>
+    </ul>
+
+  <h2>🚀 Pasos para levantar el servidor</h2>
+    <ol>
+        <li><strong>Clonar el repositorio</strong>
+            <code>git clone [url-del-repositorio]<br>cd [api_biblioteca]</code>
+        </li>
+        <li><strong>Instalar dependencias</strong>
+            <code>npm install</code>
+        </li>
+        <li><strong>Configurar variables de entorno</strong>
+            <ul>
+                <li>Crear un archivo <code>.env</code> basado en mi <code>.env</code></li>
+                <li>Configurar la conexión a Myqsl y otros valores necesarios</li>
+            </ul>
+        </li>
+        <li><strong>Iniciar el servidor</strong>
+            <code>npm start:dev</code>
+        </li>
+        <li><strong>Probar la API</strong>
+            <ul>
+                <li>El servidor estará disponible en <code>http://localhost:3000</li>
+                <li>Usar la colección de Insomnia para probar los endpoints</li>
+            </ul>
+        </li>
+    </ol>
+
+  <h2>✅ Colección de Insomnia</h2>
+
+  <h2>Endpoints implementados</h2>
+
+  <h3>👤 Usuarios</h3>
+    <ul>
+        <li class="endpoint"><span class="method get">GET</span> /usuario</li>
+        <li class="endpoint"><span class="method get">GET</span> /usuario/:id</li>
+        <li class="endpoint"><span class="method post">POST</span> /usuario</li>
+        <li class="endpoint"><span class="method put">PUT</span> /usuario/:id</li>
+        <li class="endpoint"><span class="method delete">DELETE</span> /usuario/:id</li>
+    </ul>
+
+  <h3>📖 Libros</h3>
+        <li class="endpoint"><span class="method get">GET</span> /libro</li>
+        <li class="endpoint"><span class="method get">GET</span> /libro/:id</li>
+        <li class="endpoint"><span class="method post">POST</span> /libro</li>
+        <li class="endpoint"><span class="method put">PUT</span> /libro/:id</li>
+        <li class="endpoint"><span class="method delete">DELETE</span> /libro/:id</li>
+    </ul>
+
+  <h3>✍️ Autores</h3>
+        <li class="endpoint"><span class="method get">GET</span> /autor</li>
+        <li class="endpoint"><span class="method get">GET</span> /autor/:id</li>
+        <li class="endpoint"><span class="method post">POST</span> /autor</li>
+        <li class="endpoint"><span class="method put">PUT</span> /autor/:id</li>
+        <li class="endpoint"><span class="method delete">DELETE</span> /autor/:id</li>
+    </ul>
+
+  <h3>📅 Préstamos</h3>
+        <li class="endpoint"><span class="method get">GET</span> /prestamo</li>
+        <li class="endpoint"><span class="method get">GET</span> /prestamo/:id</li>
+        <li class="endpoint"><span class="method post">POST</span> /prestamo</li>
+        <li class="endpoint"><span class="method put">PUT</span> /prestamo/:id</li>
+        <li class="endpoint"><span class="method delete">DELETE</span> /prestamo/:id</li>
+    </ul>
+
+</body>
+</html>
+
+
+
+
+
 <p align="center">
   <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo-small.svg" width="120" alt="Nest Logo" /></a>
 </p>
